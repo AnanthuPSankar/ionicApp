@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>workout-logger</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--forms for the workout logger page-->
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">workout-logger</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form (ngSubmit)="logWorkout()">
+    <ion-item>
+      <ion-label position="floating">Workout Type</ion-label>
+      <ion-input [(ngModel)]="workout.type" name="type" required></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Duration (in minutes)</ion-label>
+      <ion-input [(ngModel)]="workout.duration" name="duration" type="number" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Calories Burned</ion-label>
+      <ion-input [(ngModel)]="workout.calories" name="calories" type="number" required></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="full" [disabled]="!workout.type || !workout.duration || !workout.calories">
+      Log Workout
+    </ion-button>
+  </form>
+
+  <ion-button expand="full" (click)="takePicture()">Take Workout Picture</ion-button>
+  <ion-img *ngIf="photo" [src]="photo"></ion-img> <!-- this is to display the taken picture -->
+  
+</ion-content>

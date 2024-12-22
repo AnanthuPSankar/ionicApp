@@ -1,0 +1,10 @@
+{
+  "name": "healthyHumans",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "build": {
+    "outputPath": "www"
+  }
+}

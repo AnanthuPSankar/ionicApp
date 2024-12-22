@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<!--To allow users to navigate between pages--->
+
+  <ion-button (click)="navigateToLogger()">Log Workout</ion-button>
+  <ion-button (click)="navigateToGallery()">View Gallery</ion-button>
+  <ion-button (click)="navigateToReminders()">Set Reminder</ion-button>
+</ion-content>
