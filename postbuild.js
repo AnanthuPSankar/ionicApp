@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Define paths
+// to define paths
 const src = path.join(__dirname, 'www', 'browser', 'index.html');
 const dest = path.join(__dirname, 'www', 'index.html');
 
